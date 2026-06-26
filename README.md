@@ -1,4 +1,4 @@
-# Squawk 🛩️
+# Squawk
 
 **A tiny macOS menu‑bar app + screen saver that shows the real aircraft flying over you — on a retro green radar.**
 
@@ -6,7 +6,7 @@ Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and ro
 
 ---
 
-## ⬇️ Download
+## Download
 
 ### **[Download Squawk v1.0.0 (.dmg)](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)**
 
@@ -21,7 +21,7 @@ macOS 13 (Ventura) or later · ~1 MB · free
 3. Double‑click **`Squawk.saver`** to install the screen saver, then choose **Squawk** in **System Settings ▸ Screen Saver**.
 4. Launch **Squawk** from Spotlight / Applications and **allow location access** so it knows what’s overhead.
 
-### ⚠️ If macOS says *“Squawk can’t be opened…”*
+### If macOS says *“Squawk can’t be opened…”*
 
 Squawk is free and **not signed with a paid Apple Developer certificate**, so macOS is cautious the first time. It’s safe — just tell macOS to open it:
 
