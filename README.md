@@ -10,7 +10,7 @@ Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and ro
 
 ### **[Download Squawk v1.0.0 (.dmg)](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)**
 
-macOS 13 (Ventura) or later · ~1 MB · free
+macOS 13 (Ventura) or later · Universal — Apple Silicon &amp; Intel · free
 
 ---
 
