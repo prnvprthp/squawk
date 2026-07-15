@@ -21,18 +21,24 @@ macOS 13 (Ventura) or later · Universal — Apple Silicon &amp; Intel · free
 3. Double‑click **`Squawk.saver`** to install the screen saver, then choose **Squawk** in **System Settings ▸ Screen Saver**.
 4. Launch **Squawk** from Spotlight / Applications and **allow location access** so it knows what’s overhead.
 
-### If macOS says *“Squawk can’t be opened…”*
+### First launch: *“Apple could not verify…”* / *“can’t be opened”*
 
-Squawk is free and **not signed with a paid Apple Developer certificate**, so macOS is cautious the first time. It’s safe — just tell macOS to open it:
+Squawk is free and **not signed with a paid Apple Developer certificate**, so macOS blocks it the first time. It’s safe — here’s the standard way to open an un‑notarized app:
 
-- **The app:** right‑click **`Squawk.app` ▸ Open ▸ Open** (only needed once).
-- **The screen saver:** after double‑clicking it, open **System Settings ▸ Privacy & Security** and click **Open Anyway**.
+1. Double‑click the app (or the screen saver). When the warning appears, click **Done**.
+2. Open **System Settings ▸ Privacy & Security** and scroll down to the **Security** section.
+3. You’ll see *“Squawk” was blocked…* — click **Open Anyway** and authenticate.
+4. Confirm **Open Anyway** once more. It opens, and won’t ask again.
 
-Or clear the quarantine flag once in Terminal:
+Do this once for **`Squawk.app`** and once for **`Squawk.saver`**.
+
+> On **macOS Sequoia** the old *right‑click ▸ Open* shortcut no longer works — use the steps above. (On Ventura/Sonoma, right‑click ▸ Open ▸ Open also works.)
+
+Prefer Terminal? Clear the quarantine flag instead:
 
 ```bash
-xattr -dr com.apple.quarantine /Applications/Squawk.app
-xattr -dr com.apple.quarantine ~/Library/Screen\ Savers/Squawk.saver
+sudo xattr -rd com.apple.quarantine /Applications/Squawk.app
+sudo xattr -rd com.apple.quarantine ~/Library/Screen\ Savers/Squawk.saver
 ```
 
 ---
