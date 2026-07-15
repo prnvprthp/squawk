@@ -1,12 +1,12 @@
 # Squawk
 
-**A tiny macOS menu‑bar app + screen saver that shows the real aircraft flying over you — on a retro green radar.**
+**A tiny menu‑bar / system‑tray app + screen saver that shows the real aircraft flying over you — on a retro green radar.** Native builds for **macOS** and **Windows**.
 
 Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and routes for whatever is in the sky above your actual location. No account, no API keys, no setup.
 
 ---
 
-## Download
+## Download — macOS
 
 ### **[Download Squawk v1.0.0 (.dmg)](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)**
 
@@ -14,7 +14,7 @@ macOS 13 (Ventura) or later · Universal — Apple Silicon &amp; Intel · free
 
 ---
 
-## Install
+## Install — macOS
 
 1. Open the downloaded **`Squawk.dmg`**.
 2. Drag **`Squawk.app`** onto the **Applications** shortcut.
@@ -40,6 +40,22 @@ Prefer Terminal? Clear the quarantine flag instead:
 sudo xattr -rd com.apple.quarantine /Applications/Squawk.app
 sudo xattr -rd com.apple.quarantine ~/Library/Screen\ Savers/Squawk.saver
 ```
+
+---
+
+## Windows (preview)
+
+A Windows build — system‑tray app **and** screen saver — is in early testing.
+
+### **[Download Squawk for Windows (.zip)](https://github.com/prnvprthp/squawk/releases/download/windows-preview/Squawk-Windows-preview.zip)**
+
+Windows 10/11 · 64‑bit · self‑contained (no .NET install needed)
+
+1. Download and **unzip** it.
+2. **Tray app** — run **`Squawk.exe`**. If Windows shows *“Windows protected your PC”*, click **More info → Run anyway** (it’s unsigned, not malware). A green radar icon appears in the system tray (bottom‑right, by the clock); left‑click it to open the radar.
+3. **Screen saver** — right‑click **`SquawkSaver.scr` → Install**, then Preview / Save.
+
+No account or keys — it finds your city and shows real nearby planes. ⚠️ This is the first Windows build and is still being tested; feedback welcome.
 
 ---
 
