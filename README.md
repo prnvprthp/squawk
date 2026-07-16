@@ -1,16 +1,19 @@
-# Squawk
+# Squawk 🛩️
 
-**A tiny menu‑bar / system‑tray app + screen saver that shows the real aircraft flying over you — on a retro green radar.** Native builds for **macOS** and **Windows**.
+**A tiny menu‑bar / system‑tray app + screen saver that shows the real aircraft flying over you — on a retro radar.** Native builds for **macOS** and **Windows**.
 
 Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and routes for whatever is in the sky above your actual location. No account, no API keys, no setup.
 
 ---
 
-## Download — macOS
+## ⬇️ Download — v1.1
 
-### **[Download Squawk v1.0.0 (.dmg)](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)**
+| Platform | Download | Requires |
+|---|---|---|
+| **macOS** | **[Squawk.dmg](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)** | macOS 13+ · Universal (Apple Silicon & Intel) |
+| **Windows** | **[Squawk-Windows.zip](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk-Windows.zip)** | Windows 10/11 · 64‑bit · self‑contained |
 
-macOS 13 (Ventura) or later · Universal — Apple Silicon &amp; Intel · free
+Both are free, and neither needs anything installed first.
 
 ---
 
@@ -26,7 +29,7 @@ macOS 13 (Ventura) or later · Universal — Apple Silicon &amp; Intel · free
 Squawk is free and **not signed with a paid Apple Developer certificate**, so macOS blocks it the first time. It’s safe — here’s the standard way to open an un‑notarized app:
 
 1. Double‑click the app (or the screen saver). When the warning appears, click **Done**.
-2. Open **System Settings ▸ Privacy & Security** and scroll down to the **Security** section.
+2. Open **System Settings ▸ Privacy & Security** and scroll to the **Security** section.
 3. You’ll see *“Squawk” was blocked…* — click **Open Anyway** and authenticate.
 4. Confirm **Open Anyway** once more. It opens, and won’t ask again.
 
@@ -43,36 +46,41 @@ sudo xattr -rd com.apple.quarantine ~/Library/Screen\ Savers/Squawk.saver
 
 ---
 
-## Windows (preview)
-
-A Windows build — system‑tray app **and** screen saver — is in early testing.
-
-### **[Download Squawk for Windows (.zip)](https://github.com/prnvprthp/squawk/releases/download/windows-preview/Squawk-Windows-preview.zip)**
-
-Windows 10/11 · 64‑bit · self‑contained (no .NET install needed)
+## Install — Windows
 
 1. Download and **unzip** it.
-2. **Tray app** — run **`Squawk.exe`**. If Windows shows *“Windows protected your PC”*, click **More info → Run anyway** (it’s unsigned, not malware). A green radar icon appears in the system tray (bottom‑right, by the clock); left‑click it to open the radar.
-3. **Screen saver** — right‑click **`SquawkSaver.scr` → Install**, then Preview / Save.
+2. **Tray app** — run **`Squawk.exe`**. If Windows shows *“Windows protected your PC”*, click **More info → Run anyway** (it’s unsigned, not malware). A radar icon appears in the system tray (bottom‑right, by the clock — you may need the **^** to show hidden icons). **Left‑click** it to open the radar; drag any edge to resize it. **Right‑click** for the menu.
+3. **Screen saver** — right‑click **`SquawkSaver.scr` → Install**, then Preview / Save. To exit it: move the mouse, click, or press a key.
 
-No account or keys — it finds your city and shows real nearby planes. ⚠️ This is the first Windows build and is still being tested; feedback welcome.
+---
+
+## 🎨 Themes
+
+Three looks — **Green**, **Red**, or **White**:
+
+- **macOS** — app: **Settings ▸ THEME**. Screen saver: **System Settings ▸ Screen Saver ▸ “Screen Saver Options…”**.
+- **Windows** — right‑click the tray icon ▸ **Theme** (it applies to the screen saver too).
 
 ---
 
 ## What you get
 
-- **Menu‑bar radar** — click the icon for a live sweep of nearby traffic: callsign, altitude, speed, aircraft model, and departure → arrival.
-- **Screen saver** — the same radar, full‑screen, scanning **50 km** around you whenever your Mac is idle.
-- **Real planes, your sky** — positions come from the public ADS‑B network, centered on your location.
+- **Menu‑bar / tray radar** — a live sweep of nearby traffic: callsign, altitude, speed, aircraft type, tail number, and departure → arrival.
+- **Screen saver** — the same radar, full‑screen, whenever your machine is idle.
+- **A real‑radar feel** — contacts persist between sweeps and only move when the beam reaches them, each leaving a fading trail.
+- **Emergencies** — squawk **7500 / 7600 / 7700** pulse red with a ⚠ banner. **Military** aircraft show amber + **MIL**.
+- **“Overhead now”** — the plane most directly above you, called out at a glance.
+- **Click a plane** → its **photo** and **operator**.
+- **Overhead alerts** — an optional notification when a plane is about to pass over you.
 
 ---
 
 ## Privacy
 
 - Squawk uses your **approximate location** to center the radar and to ask the flight service what’s nearby — nothing is stored, tracked, or shared with anyone.
-- The menu‑bar app gets your location from macOS; the screen saver (which can’t request location permission) estimates your **city from your IP address**.
-- All flight data is free and public — **[adsb.fi](https://adsb.fi)** / **[adsb.lol](https://adsb.lol)** for positions, **[adsbdb](https://www.adsbdb.com)** for aircraft + routes. No account or key required.
+- The desktop apps get your location from the OS; the screen saver (which can’t request location permission) estimates your **city from your IP address**.
+- All flight data is free and public — **[adsb.fi](https://adsb.fi)** / **[adsb.lol](https://adsb.lol)** for positions, **[adsbdb](https://www.adsbdb.com)** for aircraft, photos + routes. No account or key required.
 
 ---
 
-<sub>Made by [@prnvprthp](https://github.com/prnvprthp) · This repo distributes the app only — flight data © the adsb.fi / adsb.lol community.</sub>
+<sub>Made by [@prnvprthp](https://github.com/prnvprthp) · This repo distributes the apps only — flight data © the adsb.fi / adsb.lol community.</sub>
