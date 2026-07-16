@@ -29,9 +29,10 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 ### Fixed
 - **The radar could go empty for no reason.** When the primary flight feed returned a valid-but-empty response, Squawk accepted it instead of falling back to the backup feed. Both feeds are now tried properly.
 - Selecting a plane no longer makes its photo and operator flicker on each refresh.
-- *(Windows)* The screen saver wouldn't exit on mouse or key input.
+- *(Windows)* **The screen saver wouldn't exit** on mouse or key input. The saver's windows never took focus, so keystrokes went to whatever was behind them and never reached Squawk at all. It now claims the foreground on start, and additionally watches the mouse and keyboard at the OS level so it can be dismissed even if something else holds focus.
 - *(Windows)* The tray radar popover couldn't be resized; it now drags from any edge and remembers its size.
 - *(Windows)* The screen saver's *Settings* button claimed there were no settings; it now points at the tray's Theme menu.
+- *(Windows)* Install instructions now say to copy `SquawkSaver.scr` into `C:\Windows\System32` — Windows only lists screen savers found there, so the previous right-click ▸ Install advice left it missing from the Screen saver dropdown.
 
 ### Known issues
 - **Neither build is code-signed or notarized**, so macOS and Windows each warn once on first launch. The README has the click-through for both. This also stops the macOS *Launch at login* toggle from sticking — add Squawk to *System Settings ▸ General ▸ Login Items* by hand for now.

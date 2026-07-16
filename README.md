@@ -49,8 +49,15 @@ sudo xattr -rd com.apple.quarantine ~/Library/Screen\ Savers/Squawk.saver
 ## Install — Windows
 
 1. Download and **unzip** it.
-2. **Tray app** — run **`Squawk.exe`**. If Windows shows *“Windows protected your PC”*, click **More info → Run anyway** (it’s unsigned, not malware). A radar icon appears in the system tray (bottom‑right, by the clock — you may need the **^** to show hidden icons). **Left‑click** it to open the radar; drag any edge to resize it. **Right‑click** for the menu.
-3. **Screen saver** — right‑click **`SquawkSaver.scr` → Install**, then Preview / Save. To exit it: move the mouse, click, or press a key.
+2. **Tray app** — put **`Squawk.exe`** somewhere permanent (it runs from anywhere) and open it. If Windows shows *“Windows protected your PC”*, click **More info → Run anyway** (it’s unsigned, not malware). A radar icon appears in the system tray (bottom‑right, by the clock — you may need the **^** to show hidden icons). **Left‑click** it to open the radar; drag any edge to resize it. **Right‑click** for the menu.
+
+### Screen saver
+
+Copy **`SquawkSaver.scr`** into **`C:\Windows\System32`** — you’ll be asked for administrator permission. Then open **Settings ▸ Personalization ▸ Lock screen ▸ Screen saver** and pick **SquawkSaver** from the dropdown.
+
+To exit it: move the mouse, click, or press any key.
+
+> **Why System32?** Windows only lists screen savers it finds in `C:\Windows\System32`, so that’s the one place it will reliably show up in the dropdown and stay selected. Right‑clicking the `.scr` ▸ **Install** does work from any folder — it points Windows at that exact file — but the saver then won’t appear in the dropdown, and it breaks the moment you move or delete the folder you ran it from. Copying it in avoids both problems.
 
 ---
 
