@@ -1,4 +1,4 @@
-# Squawk 🛩️
+# Squawk
 
 **A tiny menu‑bar / system‑tray app + screen saver that shows the real aircraft flying over you — on a retro radar.** Native builds for **macOS** and **Windows**.
 
@@ -6,7 +6,7 @@ Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and ro
 
 ---
 
-## ⬇️ Download — v1.1
+## Download — v1.1
 
 | Platform | Download | Requires |
 |---|---|---|
@@ -54,7 +54,7 @@ sudo xattr -rd com.apple.quarantine ~/Library/Screen\ Savers/Squawk.saver
 
 ---
 
-## 🎨 Themes
+## Themes
 
 Three looks — **Green**, **Red**, or **White**:
 
@@ -68,7 +68,7 @@ Three looks — **Green**, **Red**, or **White**:
 - **Menu‑bar / tray radar** — a live sweep of nearby traffic: callsign, altitude, speed, aircraft type, tail number, and departure → arrival.
 - **Screen saver** — the same radar, full‑screen, whenever your machine is idle.
 - **A real‑radar feel** — contacts persist between sweeps and only move when the beam reaches them, each leaving a fading trail.
-- **Emergencies** — squawk **7500 / 7600 / 7700** pulse red with a ⚠ banner. **Military** aircraft show amber + **MIL**.
+- **Emergencies** — squawk **7500 / 7600 / 7700** pulse red with a warning banner. **Military** aircraft show amber + **MIL**.
 - **“Overhead now”** — the plane most directly above you, called out at a glance.
 - **Click a plane** → its **photo** and **operator**.
 - **Overhead alerts** — an optional notification when a plane is about to pass over you.
