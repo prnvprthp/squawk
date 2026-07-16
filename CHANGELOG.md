@@ -29,7 +29,7 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 ### Fixed
 - **The radar could go empty for no reason.** When the primary flight feed returned a valid-but-empty response, Squawk accepted it instead of falling back to the backup feed. Both feeds are now tried properly.
 - Selecting a plane no longer makes its photo and operator flicker on each refresh.
-- *(Windows)* **The screen saver wouldn't exit** on mouse or key input. The saver's windows never took focus, so keystrokes went to whatever was behind them and never reached Squawk at all. It now claims the foreground on start, and additionally watches the mouse and keyboard at the OS level so it can be dismissed even if something else holds focus.
+- *(Windows)* **The screen saver could take over the screen and refuse to close** — no key, click or mouse movement would dismiss it, leaving locking the machine as the only way out. Every exit path depended on the app's UI thread being responsive, so a single stall took all of them out at once. Dismissal is now handled by a watchdog that runs independently of the app's UI, polls the mouse and keyboard directly from the OS, and force-quits the saver if it doesn't close gracefully. The saver also now takes keyboard focus properly on start.
 - *(Windows)* The tray radar popover couldn't be resized; it now drags from any edge and remembers its size.
 - *(Windows)* The screen saver's *Settings* button claimed there were no settings; it now points at the tray's Theme menu.
 - *(Windows)* Install instructions now say to copy `SquawkSaver.scr` into `C:\Windows\System32` — Windows only lists screen savers found there, so the previous right-click ▸ Install advice left it missing from the Screen saver dropdown.
@@ -37,6 +37,7 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 ### Known issues
 - **Neither build is code-signed or notarized**, so macOS and Windows each warn once on first launch. The README has the click-through for both. This also stops the macOS *Launch at login* toggle from sticking — add Squawk to *System Settings ▸ General ▸ Login Items* by hand for now.
 - The Windows build is **new and lightly tested** — please report anything that looks off.
+- **Updating the Windows screen saver:** re-downloading the zip does **not** update an installed saver. Copy the new `SquawkSaver.scr` over `C:\Windows\System32\SquawkSaver.scr`, then re-pick **SquawkSaver** in *Settings ▸ Personalization ▸ Lock screen ▸ Screen saver* — if it was ever installed from another folder, Windows still points at that old file until you re-select it.
 
 ---
 
