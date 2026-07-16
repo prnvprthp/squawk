@@ -13,7 +13,7 @@ Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and ro
 | **macOS** | **[Squawk.dmg](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)** | macOS 13+ · Universal (Apple Silicon & Intel) |
 | **Windows** | **[Squawk-Windows.zip](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk-Windows.zip)** | Windows 10/11 · 64‑bit · self‑contained |
 
-Both are free, and neither needs anything installed first.
+Both are free, and neither needs anything installed first. See the **[changelog](CHANGELOG.md)** for what's new.
 
 ---
 
@@ -72,6 +72,9 @@ Three looks — **Green**, **Red**, or **White**:
 - **“Overhead now”** — the plane most directly above you, called out at a glance.
 - **Click a plane** → its **photo** and **operator**.
 - **Overhead alerts** — an optional notification when a plane is about to pass over you.
+- **Launch at login** (macOS) — keep the radar in your menu bar from boot.
+
+Full history in the **[changelog](CHANGELOG.md)**.
 
 ---
 
