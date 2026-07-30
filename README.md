@@ -6,7 +6,7 @@ Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and ro
 
 ---
 
-## Download — v1.1
+## Download — v1.2
 
 | Platform | Download | Requires |
 |---|---|---|
@@ -22,7 +22,7 @@ Both are free, and neither needs anything installed first. See the **[changelog]
 1. Open the downloaded **`Squawk.dmg`**.
 2. Drag **`Squawk.app`** onto the **Applications** shortcut.
 3. Double‑click **`Squawk.saver`** to install the screen saver, then choose **Squawk** in **System Settings ▸ Screen Saver**.
-4. Launch **Squawk** from Spotlight / Applications and **allow location access** so it knows what’s overhead.
+4. Launch **Squawk** from Spotlight / Applications and **allow location access** so it knows what’s overhead — or skip that and pin a location yourself in **Settings ▸ LOCATION**.
 
 ### First launch: *“Apple could not verify…”* / *“can’t be opened”*
 
@@ -61,12 +61,16 @@ To exit it: move the mouse, click, or press any key.
 
 ---
 
-## Themes
+## Settings
 
-Three looks — **Green**, **Red**, or **White**:
+**macOS** — click the gear in the radar popover. **Windows** — right‑click the tray icon ▸ **Settings…**
 
-- **macOS** — app: **Settings ▸ THEME**. Screen saver: **System Settings ▸ Screen Saver ▸ “Screen Saver Options…”**.
-- **Windows** — right‑click the tray icon ▸ **Theme** (it applies to the screen saver too).
+- **Range** — how far out the radar reaches: 10 / 20 / 35 / 50 km.
+- **Location** — track this machine, or **pin the radar anywhere**. Type a city or an airport code (`BOS`, `EGLL`, `HND`) and hit **FIND**, or enter a latitude and longitude yourself. Handy for watching a hometown airport, or if you'd rather not grant location access at all.
+- **Theme** — three looks: **Green**, **Red**, or **White**.
+- **Screen saver** — its **own** theme, range and location, set from the app. Applies the next time it starts.
+
+The screen saver can also be themed on its own: **macOS** — *System Settings ▸ Screen Saver ▸ “Screen Saver Options…”*; **Windows** — everything lives in the app's Settings dialog.
 
 ---
 
@@ -79,7 +83,8 @@ Three looks — **Green**, **Red**, or **White**:
 - **“Overhead now”** — the plane most directly above you, called out at a glance.
 - **Click a plane** → its **photo** and **operator**.
 - **Overhead alerts** — an optional notification when a plane is about to pass over you.
-- **Launch at login** (macOS) — keep the radar in your menu bar from boot.
+- **Point it anywhere** — pin the radar to any city, airport code, or coordinate, on either platform.
+- **Start at login** — macOS: *Settings ▸ LAUNCH AT LOGIN*. Windows: tray ▸ *Start with Windows*.
 
 Full history in the **[changelog](CHANGELOG.md)**.
 
@@ -88,7 +93,8 @@ Full history in the **[changelog](CHANGELOG.md)**.
 ## Privacy
 
 - Squawk uses your **approximate location** to center the radar and to ask the flight service what’s nearby — nothing is stored, tracked, or shared with anyone.
-- The desktop apps get your location from the OS; the screen saver (which can’t request location permission) estimates your **city from your IP address**.
+- The desktop apps get your location from the OS; the screen saver (which can’t request location permission) estimates your **city from your IP address**. Pin a location in Settings and neither is used.
+- Searching for a place by name sends just that search text to Apple's geocoder (macOS) or **[Nominatim](https://nominatim.openstreetmap.org)** (Windows). Airport codes are resolved offline, on your machine.
 - All flight data is free and public — **[adsb.fi](https://adsb.fi)** / **[adsb.lol](https://adsb.lol)** for positions, **[adsbdb](https://www.adsbdb.com)** for aircraft, photos + routes. No account or key required.
 
 ---

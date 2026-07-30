@@ -4,6 +4,32 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 
 ---
 
+## v1.2 — *29 Jul 2026*
+
+**Point the radar anywhere, and set up the screen saver from the app.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.2.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip`
+
+### Added
+- **Location override.** The radar no longer has to be centred on the machine it's running on. Pick *CUSTOM* in Settings and type a city, an **airport code** (`BOS`, `EGLL`, `HND`), or a latitude and longitude. Airport codes resolve offline; place names go to Apple's geocoder on macOS and [Nominatim](https://nominatim.openstreetmap.org) on Windows. Useful for keeping an eye on a hometown airport — or for skipping the location permission entirely.
+- **The screen saver is configured from the app.** Its **theme, range and location** now live in the app's Settings, under *SCREENSAVER*. Changes reach a saver that's already running, not just the next start.
+- **A Settings dialog on Windows** (right-click the tray icon ▸ *Settings…*) — range, location, theme, and the screen saver's own three, matching the macOS panel. Windows previously had no settings window at all.
+
+### Changed
+- **Bigger click targets.** Buttons in the macOS Settings panel and the range strip respond anywhere in the button, not only on the label text.
+- **Radar range is remembered** between launches on macOS; it used to reset to 20 km every time.
+- *(Windows)* The **Overhead alerts** toggle is remembered too — it used to reset on every launch.
+- *(Windows)* The screen saver's *Settings* button now points at the app's new SCREENSAVER section.
+- Moving the radar's centre clears the contacts painted at the old one, instead of briefly plotting them against the new position.
+
+### Fixed
+- *(macOS)* Squawk stored credentials for a flight service it **stopped using in v1.0** — a username and password, in plain text, in its preferences file. The feature is long gone; this release deletes the leftover code and **erases those saved credentials** from your machine on first launch. If you ever entered an OpenSky password here and reuse it anywhere, change it.
+
+### Known issues
+- Still **not code-signed or notarized**, so both platforms warn once on first launch — see the README. The macOS *Launch at login* toggle still needs a notarized build to stick.
+- The Windows Settings dialog is **new and unproven on-screen** — its layout has only been compile-checked. Please report anything that looks wrong.
+- **Updating the Windows screen saver:** copy the new `SquawkSaver.scr` over `C:\Windows\System32\SquawkSaver.scr`, then re-pick **SquawkSaver** in *Settings ▸ Personalization ▸ Lock screen ▸ Screen saver*.
+
+---
+
 ## v1.1 — *16 Jul 2026*
 
 **macOS + Windows, together, with themes.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.1.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip`
