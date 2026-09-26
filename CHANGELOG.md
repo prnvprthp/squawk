@@ -6,7 +6,7 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 
 ## v1.3 — *25 Sep 2026*
 
-**A redesigned screen saver, and Squawk on Fire TV.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.3.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip` (unchanged) · Fire TV `Squawk-FireTV.apk`
+**A redesigned screen saver, and Squawk on Fire TV.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.3.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip` · Fire TV `Squawk-FireTV.apk`
 
 ### Added
 - **Fire TV.** The screen saver now runs on Fire TV and other Android TV devices, with the same design, data and themes. Open *Squawk* on the TV to set the theme, range and location (an airport code or coordinates) and to preview it. It installs with the free *Downloader* app. Fire OS has no menu for third‑party screen savers, so switching it on takes one `adb` command from a computer or phone; see the README.
@@ -18,8 +18,10 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 - Sized for the screen it's on, so it looks the same on a 5K display, a 1080p TV and the System Settings thumbnail.
 - The picture drifts a few pixels over several minutes, so nothing burns into an OLED screen.
 
+- **The Windows screen saver has the new design too.** It still exits on any mouse movement, click or key press.
+  *Updating from v1.2:* copy the new `SquawkSaver.scr` over the one in `C:\Windows\System32`, then re‑pick **SquawkSaver** in the screen saver dropdown.
+
 ### Known issues
-- *(Windows)* The Windows screen saver still has the old design.
 - *(Fire TV)* Verified on a Fire TV Stick 4K Max (Fire OS 8.1.8). Older Fire OS versions are untested.
 
 ---
