@@ -4,6 +4,15 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 
 ---
 
+## v1.4.1 — *26 Sep 2026*
+
+**A smoother sweep on the Mac.** macOS only; the Windows and Fire TV downloads are unchanged from v1.4.
+
+### Fixed
+- *(macOS)* **The radar sweep stuttered**, in both the screen saver and the menu-bar popover. Each frame redrew everything, including laying out two text labels per plane and the whole compass bezel, which took about 13 ms at Retina resolution. That's most of a 60 Hz frame and more than a 120 Hz one, so frames were dropped on a busy sky. The bezel now draws only when it changes, labels are rendered once and reused, and the moving parts draw on the GPU. A frame now takes about 1 ms.
+
+---
+
 ## v1.4 — *26 Sep 2026*
 
 **Local take-offs and landings, and the apps get the new look.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.4.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip` · Fire TV `Squawk-FireTV.apk`
