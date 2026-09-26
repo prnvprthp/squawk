@@ -4,6 +4,26 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 
 ---
 
+## v1.3 — *25 Sep 2026*
+
+**A redesigned screen saver, and Squawk on Fire TV.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.3.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip` (unchanged) · Fire TV `Squawk-FireTV.apk`
+
+### Added
+- **Fire TV.** The screen saver now runs on Fire TV and other Android TV devices, with the same design, data and themes. Open *Squawk* on the TV to set the theme, range and location (an airport code or coordinates) and to preview it. It installs with the free *Downloader* app. Fire OS has no menu for third‑party screen savers, so switching it on takes one `adb` command from a computer or phone; see the README.
+
+### Changed
+- **The screen saver is redesigned.** The cramped side list is gone. A clean panel on the left names where you are and features one plane at a time: callsign, aircraft, route, altitude, speed and heading. It moves on to the next-nearest every 12 seconds, and an emergency squawk takes over the panel. Below it sit the next four aircraft in range. Nothing scrolls.
+- **A new radar.** Range rings fall on round numbers (10/20/30 km…), with a compass bezel, bearing marks, a smooth afterglow on the sweep and labels that show callsign and altitude. Labels move aside instead of overlapping. The featured plane is marked on the scope.
+- **Stays clear of the macOS clock.** Since Sonoma, macOS draws a large clock at the top centre of any screen saver, and the old *OVERHEAD* banner sat right under it. That area is now left empty.
+- Sized for the screen it's on, so it looks the same on a 5K display, a 1080p TV and the System Settings thumbnail.
+- The picture drifts a few pixels over several minutes, so nothing burns into an OLED screen.
+
+### Known issues
+- *(Windows)* The Windows screen saver still has the old design.
+- *(Fire TV)* Verified on a Fire TV Stick 4K Max (Fire OS 8.1.8). Older Fire OS versions are untested.
+
+---
+
 ## v1.2 — *29 Jul 2026*
 
 **Point the radar anywhere, and set up the screen saver from the app.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.2.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip`

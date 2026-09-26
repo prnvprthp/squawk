@@ -1,19 +1,20 @@
 # Squawk
 
-**A tiny menu‑bar / system‑tray app + screen saver that shows the real aircraft flying over you — on a retro radar.** Native builds for **macOS** and **Windows**.
+**A tiny menu‑bar / system‑tray app + screen saver that shows the real aircraft flying over you — on a retro radar.** Native builds for **macOS** and **Windows**, and the screen saver for **Fire TV**.
 
 Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and routes for whatever is in the sky above your actual location. No account, no API keys, no setup.
 
 ---
 
-## Download — v1.2
+## Download — v1.3
 
 | Platform | Download | Requires |
 |---|---|---|
 | **macOS** | **[Squawk.dmg](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)** | macOS 13+ · Universal (Apple Silicon & Intel) |
 | **Windows** | **[Squawk-Windows.zip](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk-Windows.zip)** | Windows 10/11 · 64‑bit · self‑contained |
+| **Fire TV** | **[Squawk-FireTV.apk](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk-FireTV.apk)** | Fire TV · tested on Fire OS 8 · screen saver only |
 
-Both are free, and neither needs anything installed first. See the **[changelog](CHANGELOG.md)** for what's new.
+All free, and none of them needs anything installed first. See the **[changelog](CHANGELOG.md)** for what's new.
 
 ---
 
@@ -58,6 +59,38 @@ Copy **`SquawkSaver.scr`** into **`C:\Windows\System32`** — you’ll be asked 
 To exit it: move the mouse, click, or press any key.
 
 > **Why System32?** Windows only lists screen savers it finds in `C:\Windows\System32`, so that’s the one place it will reliably show up in the dropdown and stay selected. Right‑clicking the `.scr` ▸ **Install** does work from any folder — it points Windows at that exact file — but the saver then won’t appear in the dropdown, and it breaks the moment you move or delete the folder you ran it from. Copying it in avoids both problems.
+
+---
+
+## Install — Fire TV
+
+Fire TV apps outside the Amazon Appstore are installed with the free **Downloader** app.
+
+1. On the Fire TV, search for and install **Downloader** (by AFTVnews) from the Appstore.
+2. Open **Settings ▸ My Fire TV ▸ Developer options ▸ Install unknown apps** and turn it on for **Downloader**.
+   No *Developer options*? Open **Settings ▸ My Fire TV ▸ About** and click your device's name **7 times**, then go back.
+3. Open Downloader, type this address and press **Go**:
+   `github.com/prnvprthp/squawk/releases/latest/download/Squawk-FireTV.apk`
+4. Choose **Install**, then **Done**. You can delete the downloaded file when Downloader offers.
+5. Open **Squawk** from *Your Apps* to choose a theme, range and location (an airport code like `BOS`, or coordinates), and to **Preview** it.
+
+### Making it the screen saver
+
+Fire OS has no menu for choosing a third‑party screen saver, so this takes one command from a computer (or from an ADB app on an Android phone) on the **same Wi‑Fi**:
+
+1. On the Fire TV: **Developer options ▸ ADB debugging ▸ On**. The TV's IP address is under **Settings ▸ My Fire TV ▸ About ▸ Network**.
+2. Install Google's [Android platform tools](https://developer.android.com/tools/releases/platform-tools) on the computer, then run:
+   ```bash
+   adb connect <TV-IP-address>
+   adb shell settings put secure screensaver_components com.squawk.tv/.SquawkDream
+   ```
+   Accept the *Allow USB debugging?* prompt on the TV. There's no need to tick *Always allow*.
+3. **Turn ADB debugging back off**, and turn *Install unknown apps* off for Downloader. Squawk keeps working with both off.
+
+The screen saver starts after the TV's usual idle time (**Settings ▸ Display & Sounds ▸ Screensaver**). A Fire OS update can switch it back to Amazon's own; if that happens, repeat these three steps. To return to Amazon's saver yourself, run
+`adb shell settings put secure screensaver_components com.amazon.ftv.screensaver/.app.services.ScreensaverService`.
+
+**What it can access:** the only permission it has is Internet. It sends nothing about you or the TV. It fetches public flight data over HTTPS (a rough location goes to the ADS‑B services, and your IP to an IP‑location service unless you pin a location), and only while the screen saver or Preview is on screen.
 
 ---
 
