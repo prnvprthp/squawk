@@ -6,7 +6,7 @@ Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and ro
 
 ---
 
-## Download — v1.3
+## Download — v1.4
 
 | Platform | Download | Requires |
 |---|---|---|
@@ -96,10 +96,10 @@ The screen saver starts after the TV's usual idle time (**Settings ▸ Display &
 
 ## Settings
 
-**macOS** — click the gear in the radar popover. **Windows** — right‑click the tray icon ▸ **Settings…**
+**macOS** — click the gear in the radar popover. **Windows** — **Settings** at the bottom of the popover, or right‑click the tray icon ▸ **Settings…**
 
 - **Range** — how far out the radar reaches: 10 / 20 / 35 / 50 km.
-- **Location** — track this machine, or **pin the radar anywhere**. Type a city or an airport code (`BOS`, `EGLL`, `HND`) and hit **FIND**, or enter a latitude and longitude yourself. Handy for watching a hometown airport, or if you'd rather not grant location access at all.
+- **Location** — track this machine, or **pin the radar anywhere**. Type a city or an airport code (`BOS`, `EGLL`, `HND`) and hit **Find**, or enter a latitude and longitude yourself. Handy for watching a hometown airport, or if you'd rather not grant location access at all.
 - **Theme** — three looks: **Green**, **Red**, or **White**.
 - **Screen saver** — its **own** theme, range and location, set from the app. Applies the next time it starts.
 
@@ -109,15 +109,16 @@ The screen saver can also be themed on its own: **macOS** — *System Settings �
 
 ## What you get
 
-- **Menu‑bar / tray radar** — a live sweep of nearby traffic: callsign, altitude, speed, aircraft type, tail number, and departure → arrival.
-- **Screen saver** — the same radar, full‑screen, whenever your machine is idle.
+- **Menu‑bar / tray radar** — a live sweep of nearby traffic, with a card for one plane (callsign, aircraft, tail number, route, altitude, speed, heading) and the rest in a list.
+- **Screen saver** — the same radar, full‑screen, whenever your machine or Fire TV is idle, with one plane at a time described beside it.
+- **Local take‑offs and landings** — planes climbing out of, or coming in to, an airport inside your range get their own colour and **DEP BOS** / **ARR BOS** on the radar.
 - **A real‑radar feel** — contacts persist between sweeps and only move when the beam reaches them, each leaving a fading trail.
 - **Emergencies** — squawk **7500 / 7600 / 7700** pulse red with a warning banner. **Military** aircraft show amber + **MIL**.
 - **“Overhead now”** — the plane most directly above you, called out at a glance.
 - **Click a plane** → its **photo** and **operator**.
 - **Overhead alerts** — an optional notification when a plane is about to pass over you.
 - **Point it anywhere** — pin the radar to any city, airport code, or coordinate, on either platform.
-- **Start at login** — macOS: *Settings ▸ LAUNCH AT LOGIN*. Windows: tray ▸ *Start with Windows*.
+- **Start at login** — macOS: *Settings ▸ Launch at login*. Windows: tray ▸ *Start with Windows*.
 
 Full history in the **[changelog](CHANGELOG.md)**.
 

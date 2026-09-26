@@ -4,6 +4,22 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 
 ---
 
+## v1.4 — *26 Sep 2026*
+
+**Local take-offs and landings, and the apps get the new look.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.4.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip` · Fire TV `Squawk-FireTV.apk`
+
+### Added
+- **Planes using a nearby airport stand out.** A plane taking off from or landing at an airport inside your range gets its own colour: sky blue on Green, lavender on Red, mint on White, chosen not to clash with emergency, military or altitude colours. Its radar label reads **DEP BOS** or **ARR BOS**, the panel says **LANDING AT BOS**, and it gets first turn in the screen saver's rotation. A plane only counts below 10,000 ft and when its climb or descent agrees with its route, so stale route data doesn't light up an airliner at cruise height. On every platform.
+
+### Changed
+- **The menu-bar app (macOS) and tray app (Windows) have the new design.** A portrait popover with where you are, the same radar as the screen saver, range pills, a card for one plane and the rest as a list. Click a blip or a row to put that plane in the card, with its photo and operator. On Windows the old wide window is replaced; it's still resizable. The macOS Settings screen matches too.
+- The radar's labels no longer run into the outer ring's distance label.
+
+### Fixed
+- *(macOS)* Altitudes could read one foot low (28,000 ft showed as 27,999) because the conversion from metres truncated instead of rounding.
+
+---
+
 ## v1.3 — *25 Sep 2026*
 
 **A redesigned screen saver, and Squawk on Fire TV.** [Download](https://github.com/prnvprthp/squawk/releases/tag/v1.3.0) · macOS `Squawk.dmg` · Windows `Squawk-Windows.zip` · Fire TV `Squawk-FireTV.apk`
