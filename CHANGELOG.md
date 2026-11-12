@@ -4,6 +4,15 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 
 ---
 
+## v1.5.1 · *12 Nov 2026*
+
+**Flight tracker routes that read backwards.** All platforms.
+
+### Fixed
+- *(all platforms)* **A flight listed with its return route no longer reads backwards.** The route database sometimes files a flight number under the other leg (DAL451 showed Boston to Dallas while flying east), so the tracker counted "flown" from the wrong airport. When a plane well away from both airports keeps flying away from its destination for about half a minute, Squawk now drops that route and looks for the one it is really flying.
+
+---
+
 ## v1.5.0 · *12 Nov 2026*
 
 **Flight tracker** on every platform, a **Yellow** theme, and a calmer screen saver.
