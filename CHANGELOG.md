@@ -4,6 +4,34 @@ All notable changes to **Squawk**. Newest first. Downloads live on the [releases
 
 ---
 
+## v1.5.0 · *12 Nov 2026*
+
+**Flight tracker** on every platform, a **Yellow** theme, and a calmer screen saver.
+
+### Added
+- *(all platforms)* **A Yellow theme.** Warm amber radar; emergencies stay red, military shows cyan and local take-offs and landings green, so nothing clashes with the yellow.
+- *(all platforms)* **A Track mode, separate from the radar.** Follow any one aircraft anywhere in the world on a map, by flight number (`DL123`), callsign, tail number or ICAO hex, or press Track on a plane in the radar. The map shows its route, the trail it has flown and its live position, with the same details as the radar card plus distance flown and remaining, and time left. A flight that hasn't departed shows its route and "Not yet airborne", then goes live by itself. Free and keyless as before; there is no free schedule feed, so no departure times or delays.
+- *(all platforms)* **The screen saver follows your tracked flight** instead of the radar, until it lands. Turn that off in Settings ▸ Screen saver.
+- *(Windows)* **The same Track mode in the tray popover**: a RADAR | TRACK switch, a search box for a flight number, callsign, tail number or hex, and a Track button on any plane's card. It uses the same bundled map data, so it needs no tile server and no key.
+- *(macOS, Windows)* **The rest of Potato Projects, one click away.** A nine-dot button in the Mac popover's header, and a "Potato Projects apps" submenu in the Windows tray menu, list the other apps in the suite and open them. The list updates itself from the Potato Projects site, so new apps appear without a Squawk update.
+- *(Fire TV)* **A Flight tracker screen in the app**: choose "Track a flight…" in Squawk's settings, type a flight number, callsign, tail or hex with the on-screen keyboard, and watch it on the map. On the remote, OK changes the flight, ◀ ▶ switch between the whole route and a close-up, and Back leaves. A new "Screen saver shows" setting picks the tracked flight or the radar.
+
+- *(all platforms)* **Wrong or missing route? It finds the real one.** The route database keeps one route per callsign and some are stale (EY6 reads Munich; the flight is Washington). When a live aircraft disagrees with its route, or has none, Squawk searches the airline's other flight numbers for one the aircraft is really on: near its path and heading for its destination, preferring a route that starts where the flight was first seen. The result is marked as worked out from the aircraft's position.
+
+### Changed
+- *(all platforms)* **The highlighted plane is marked by a soft spotlight** (a wide glow in its own colour that slowly breathes, and a brighter dot) instead of a rotating ring.
+- *(all platforms)* **No more dimming when the next plane takes its turn.** The flight details turn over like a departure board (the old ones slide up and out as the new ones slide in, a third of a second), and nothing else moves: the radar, sweep, header and list stay exactly as they are. Previously the panel faded out and back in, which read as the whole screen dimming.
+- *(Windows)* **The screen saver and tray radar cost a fraction of what they did:** about 1.5 ms a frame at 1080p (was 9) and 4 ms at 4K (was 35). The background is now drawn once and copied in, and the sweep only paints the wedge you can see. 4K screens now run at 60 fps like everything else (they were held to 30).
+- *(Fire TV)* The same two changes, plus no per-frame allocations (rectangles, colour filters, formatted strings), which on a Fire Stick turn into garbage-collection pauses.
+- *(macOS)* The radar draws at 60 fps on 120 Hz ProMotion displays instead of 120: half the work, and the sweep looks the same.
+
+### Fixed
+- *(all platforms)* **Flights that broadcast extra letters after the number.** Airlines often add one or two letters in ADS-B (EY6 flies as `ETD6HZ`; likewise `BAW83E`, `EZY19YQ`), and the data source has no prefix search, so tracking by flight number never found them. Squawk now looks for them in the sky near the route's airports and around you, then locks onto the aircraft.
+- *(all platforms)* The tracker said "Can't reach the ADS-B network" when a refused extra lookup followed a successful one, and fired several lookups within a second. Requests are now spaced out, and offline only shows when nothing answered.
+- *(all platforms)* The solid line showing how far a flight has come could overshoot the aircraft just after take-off.
+
+---
+
 ## v1.4.1 · *26 Sep 2026*
 
 **A smoother sweep on the Mac.** macOS only; the Windows and Fire TV downloads are unchanged from v1.4.

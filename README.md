@@ -6,13 +6,13 @@ Live ADS‑B data, a sweeping radar, callsigns, altitudes, aircraft types and ro
 
 ---
 
-## Download: v1.4
+## Download: v1.5
 
 | Platform | Download | Requires |
 |---|---|---|
 | **macOS** | **[Squawk.dmg](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk.dmg)** | macOS 13+ · Universal (Apple Silicon & Intel) |
 | **Windows** | **[Squawk-Windows.zip](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk-Windows.zip)** | Windows 10/11 · 64‑bit · self‑contained |
-| **Fire TV** | **[Squawk-FireTV.apk](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk-FireTV.apk)** | Fire TV · tested on Fire OS 8 · screen saver only |
+| **Fire TV** | **[Squawk-FireTV.apk](https://github.com/prnvprthp/squawk/releases/latest/download/Squawk-FireTV.apk)** | Fire TV · tested on Fire OS 8 · screen saver + flight tracker |
 
 All free, and none of them needs anything installed first. See the **[changelog](CHANGELOG.md)** for what's new.
 
@@ -72,7 +72,7 @@ Fire TV apps outside the Amazon Appstore are installed with the free **Downloade
 3. Open Downloader, type this address and press **Go**:
    `github.com/prnvprthp/squawk/releases/latest/download/Squawk-FireTV.apk`
 4. Choose **Install**, then **Done**. You can delete the downloaded file when Downloader offers.
-5. Open **Squawk** from *Your Apps* to choose a theme, range and location (an airport code like `BOS`, or coordinates), and to **Preview** it.
+5. Open **Squawk** from *Your Apps* to choose a theme, range and location (an airport code like `BOS`, or coordinates), to **Preview** it, and to **Track a flight…** on a world map.
 
 ### Making it the screen saver
 
@@ -100,8 +100,8 @@ The screen saver starts after the TV's usual idle time (**Settings ▸ Display &
 
 - **Range**, how far out the radar reaches: 10 / 20 / 35 / 50 km.
 - **Location**: track this machine, or **pin the radar anywhere**. Type a city or an airport code (`BOS`, `EGLL`, `HND`) and hit **Find**, or enter a latitude and longitude yourself. Handy for watching a hometown airport, or if you'd rather not grant location access at all.
-- **Theme**, three looks: **Green**, **Red**, or **White**.
-- **Screen saver**: its **own** theme, range and location, set from the app. Applies the next time it starts.
+- **Theme**, four looks: **Green**, **Red**, **White**, or **Yellow**.
+- **Screen saver**: its **own** theme, range and location, set from the app, and whether it shows your **tracked flight** or always the radar. Applies the next time it starts.
 
 The screen saver can also be themed on its own: **macOS**, *System Settings ▸ Screen Saver ▸ “Screen Saver Options…”*; **Windows**. Everything lives in the app's Settings dialog.
 
@@ -111,6 +111,7 @@ The screen saver can also be themed on its own: **macOS**, *System Settings ▸ 
 
 - **Menu‑bar / tray radar**: a live sweep of nearby traffic, with a card for one plane (callsign, aircraft, tail number, route, altitude, speed, heading) and the rest in a list.
 - **Screen saver**: the same radar, full‑screen, whenever your machine or Fire TV is idle, with one plane at a time described beside it.
+- **Track a flight anywhere in the world**: type a flight number (`DL123`), callsign, tail number or ICAO hex, or press **Track** on a plane in the radar. A world map shows its route, the trail it has flown and where it is now, with distance and time remaining. The screen saver follows it until it lands.
 - **Local take‑offs and landings**: planes climbing out of, or coming in to, an airport inside your range get their own colour and **DEP BOS** / **ARR BOS** on the radar.
 - **A real‑radar feel**: contacts persist between sweeps and only move when the beam reaches them, each leaving a fading trail.
 - **Emergencies**: squawk **7500 / 7600 / 7700** pulse red with a warning banner. **Military** aircraft show amber + **MIL**.
@@ -119,6 +120,7 @@ The screen saver can also be themed on its own: **macOS**, *System Settings ▸ 
 - **Overhead alerts**: an optional notification when a plane is about to pass over you.
 - **Point it anywhere**: pin the radar to any city, airport code, or coordinate, on either platform.
 - **Start at login**, macOS: *Settings ▸ Launch at login*. Windows: tray ▸ *Start with Windows*.
+- **The rest of Potato Projects**: the nine‑dot button in the Mac popover, or tray ▸ *Potato Projects apps* on Windows.
 
 Full history in the **[changelog](CHANGELOG.md)**.
 
